@@ -1,0 +1,135 @@
+$color: black;
+
+body{
+	text-align: center;
+}
+.mickey{
+	display: inline-block;
+	width: 400px;
+	height: 400px;
+	background: $color;
+	border-radius: 50%;
+	position: relative;
+	top: 200px;
+	&:after, &:before{
+		display: inline-block;
+		content: "";
+		width: 250px;
+		height: 250px;
+		background: $color;
+		border-radius: 50%;
+		top: -150px;
+		left: -150px;
+		position: absolute;
+	}
+	&:before{
+		left: 300px;
+	}
+}
+
+
+.boton{
+	background: #333;
+	color: white;
+	display:inline-block;
+	border-radius: 3px;
+	text-decoration: none;
+	padding: 10px 30px;
+	margin: 10px;
+	transition: .5s;
+	&:hover{
+		background: darken(#333,20%);
+	}
+}
+
+.boton-rojo{
+	@extend .boton;
+	background: red;
+	&:hover{
+		background: darken(red,20%);
+	}
+}
+
+
+.boton-verde{
+	@extend .boton;
+	background: green;
+	&:hover{
+		background: lighten(green,20%);
+	}
+}
+
+.boton-grande{
+	@extend .boton;
+	font-size: 20px;
+}
+
+.boton-borde{
+	@extend .boton;
+	border: 1px solid #333;
+	background: none;
+	color: #333;
+}
+
+@mixin crear-circulo($medida, $color-fondo){
+	-moz-border-radius: $medida;
+	-o-border-radius: $medida;
+	-ms-border-radius: $medida;
+	-webkit-border-radius: $medida;
+	border-radius: $medida;
+	background: $color-fondo;
+}
+
+
+
+
+#telefe{
+	.te{
+		display: inline-block;
+		width: 100px;
+		height: 100px;
+		@include crear-circulo(10px, red);	
+	}
+
+	.le{
+		@extend .te;
+		@include crear-circulo(30px, blue);
+	}
+	.fe{
+		@extend .te;
+		@include crear-circulo(50%, green);
+	}
+}
+
+@mixin redondear-borde($radio){
+	-moz-border-radius: $radio;
+	-o-border-radius: $radio;
+	-ms-border-radius: $radio;
+	-webkit-border-radius: $radio;
+	border-radius: $radio;
+}
+
+@mixin crear-boton($tletra, $fondo, $bcolor, $lcolor, $paddingv, $paddingh, $radio){
+	font-size: $tletra;
+	background: $fondo;
+	border: 1px solid $bcolor;
+	color: $lcolor;
+	padding: $paddingv $paddingh;
+	text-decoration: none;
+	@include redondear-borde($radio);
+}
+
+.boton-rojo-verde{
+	@include crear-boton(20px, red, green, white, 20px, 40px,10px);
+}
+
+
+
+
+
+
+
+
+
+
+

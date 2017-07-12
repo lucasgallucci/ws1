@@ -1,0 +1,93 @@
+body {
+  text-align: center; }
+
+.mickey {
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  background: black;
+  border-radius: 50%;
+  position: relative;
+  top: 200px; }
+  .mickey:after, .mickey:before {
+    display: inline-block;
+    content: "";
+    width: 250px;
+    height: 250px;
+    background: black;
+    border-radius: 50%;
+    top: -150px;
+    left: -150px;
+    position: absolute; }
+  .mickey:before {
+    left: 300px; }
+
+.boton, .boton-rojo, .boton-verde, .boton-grande, .boton-borde {
+  background: #333;
+  color: white;
+  display: inline-block;
+  border-radius: 3px;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin: 10px;
+  transition: .5s; }
+  .boton:hover, .boton-rojo:hover, .boton-verde:hover, .boton-grande:hover, .boton-borde:hover {
+    background: black; }
+
+.boton-rojo {
+  background: red; }
+  .boton-rojo:hover {
+    background: #990000; }
+
+.boton-verde {
+  background: green; }
+  .boton-verde:hover {
+    background: #00e600; }
+
+.boton-grande {
+  font-size: 20px; }
+
+.boton-borde {
+  border: 1px solid #333;
+  background: none;
+  color: #333; }
+
+#telefe .te, #telefe .le, #telefe .fe {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: red; }
+#telefe .le {
+  -moz-border-radius: 30px;
+  -o-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  background: blue; }
+#telefe .fe {
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: green; }
+
+.boton-rojo-verde {
+  font-size: 20px;
+  background: red;
+  border: 1px solid green;
+  color: white;
+  padding: 20px 40px;
+  text-decoration: none;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px; }
+
+/*# sourceMappingURL=style.css.map */
